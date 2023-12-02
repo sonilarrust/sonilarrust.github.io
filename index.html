@@ -208,91 +208,91 @@
               <p>And here is a MathML Object</p>
             </div>
             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-            data-aos="fade-up" data-aos-delay="300">
-            <math >
-              <mi>Γ</mi>
-              <mo stretchy="false">(</mo>
-              <mi>z</mi>
-              <mo stretchy="false">)</mo>
-              <mo>=</mo>
-              <msubsup>
-                <mo>∫</mo>
-                <mn>0</mn>
-                <mo>∞</mo>
-              </msubsup>
-              <msup>
-                <mi>t</mi>
-                <mrow>
-                  <mi>z</mi>
-                  <mo>-</mo>
-                  <mn>1</mn>
-                </mrow>
-              </msup>
-              <msup>
-                <mi>e</mi>
-                <mrow>
-                  <mo>-</mo>
-                  <mi>t</mi>
-                </mrow>
-              </msup>
-              <mi>d</mi>
-              <mi>t</mi>
-              <mo>=</mo>
-              <mfrac>
-                <!-- Numerator -->
-                <mrow>
-                  <msup>
-                    <mi>e</mi>
-                    <mrow>
-                      <mo>-</mo>
-                      <mi>y</mi>
-                      <mi>z</mi>
-                    </mrow>
-                  </msup>
-                </mrow>
-                <!-- Denominator -->
-                <mrow>
-                  <mi>z</mi>
-                </mrow>
-              </mfrac>
-              <munderover>
-                <mo>∏</mo>
-                <mrow>
-                  <mi>k</mi>
-                  <mo>=</mo>
-                  <mn>1</mn>
-                </mrow>
-                <mi>∞</mi>
-              </munderover>
-              <mrow>
+              data-aos="fade-up" data-aos-delay="300">
+              <math>
+                <mi>Γ</mi>
+                <mo stretchy="false">(</mo>
+                <mi>z</mi>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+                <msubsup>
+                  <mo>∫</mo>
+                  <mn>0</mn>
+                  <mo>∞</mo>
+                </msubsup>
                 <msup>
+                  <mi>t</mi>
                   <mrow>
-                    <mo>(</mo>
-                    <mn>1</mn>
-                    <mo>+</mo>
-                    <mfrac linethickness="1">
-                      <mi>z</mi>
-                      <mi>k</mi>
-                    </mfrac>
-                    <mo>)</mo>
-                  </mrow>
-                  <mrow>
+                    <mi>z</mi>
                     <mo>-</mo>
                     <mn>1</mn>
                   </mrow>
                 </msup>
-              </mrow>
-              <mrow>
                 <msup>
                   <mi>e</mi>
                   <mrow>
-                    <mi>z</mi>
-                    <mo>/</mo>
-                    <mi>k</mi>
+                    <mo>-</mo>
+                    <mi>t</mi>
                   </mrow>
                 </msup>
-              </mrow>
-            </math>
+                <mi>d</mi>
+                <mi>t</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <!-- Numerator -->
+                  <mrow>
+                    <msup>
+                      <mi>e</mi>
+                      <mrow>
+                        <mo>-</mo>
+                        <mi>y</mi>
+                        <mi>z</mi>
+                      </mrow>
+                    </msup>
+                  </mrow>
+                  <!-- Denominator -->
+                  <mrow>
+                    <mi>z</mi>
+                  </mrow>
+                </mfrac>
+                <munderover>
+                  <mo>∏</mo>
+                  <mrow>
+                    <mi>k</mi>
+                    <mo>=</mo>
+                    <mn>1</mn>
+                  </mrow>
+                  <mi>∞</mi>
+                </munderover>
+                <mrow>
+                  <msup>
+                    <mrow>
+                      <mo>(</mo>
+                      <mn>1</mn>
+                      <mo>+</mo>
+                      <mfrac linethickness="1">
+                        <mi>z</mi>
+                        <mi>k</mi>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <mrow>
+                      <mo>-</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mrow>
+                  <msup>
+                    <mi>e</mi>
+                    <mrow>
+                      <mi>z</mi>
+                      <mo>/</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </math>
             </div>
           </div>
 
@@ -508,8 +508,16 @@
                 </svg>
                 <div class="portfolio-links">
                   <a href="#" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 1"><i
-                      class="bx bx-plus"></i></a>
+                    class="portfolio-lightbox" title="App 1">
+                    <!-- <i
+                      class="bx bx-plus"></i> -->
+                    <svg style="color: white" width="38" height="38"
+                      fill="currentColor" class="bx bx-plus" viewBox="0 1 16 16">
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                        fill="white"></path> </svg>
+                        <!-- https://www.w3schools.com/graphics/svg_path.asp -->
+                  </a>
                   <a href="portfolio-details.html" title="More Details"><i
                       class="bx bx-link"></i></a>
                 </div>
