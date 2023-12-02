@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #272829;
 }
 
@@ -30,7 +30,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 
 /*--------------------------------------------------------------
@@ -43,7 +44,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background:#eb2175;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -57,7 +58,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #2eafec;
+  background: #d13f7c;
   color: #fff;
 }
 
@@ -122,7 +123,7 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: #d13f7c;
   color: #fff;
   text-decoration: none;
 }
@@ -187,7 +188,7 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: gainsboro;
 }
 
 .nav-menu a:hover,
@@ -202,7 +203,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #d13f7c;
 }
 
 /* Mobile Navigation */
@@ -215,7 +216,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color:  #f2a2c3;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -281,7 +282,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #f2a2c3;
 }
 
 @media (min-width: 1024px) {
@@ -602,17 +603,17 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background: #d13f7c;
   transition: 0.3s;
   width: 50%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background: #f2a2c3;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid #f069a1;
 }
 
 .portfolio .portfolio-wrap:hover::before {
