@@ -33,7 +33,32 @@ h6 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: lighter;
 }
+/*--------------------------------------------------------------
+# Polygon Object
+--------------------------------------------------------------*/
+.diamond {
+  width: 400px;
+  height: 280px;
+  position: relative;
+  animation: rotateDiamond 4s linear infinite;
+  transform-origin: center;
+}
 
+polygon {
+  fill: #f043b9;
+}
+
+@keyframes rotateDiamond {
+  0% {
+    transform: rotate(0deg) scale(1); /* Initial state: no rotation, normal size */
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2); /* Midway: Rotate 180 degrees, scale up by 20% */
+  }
+  100% {
+    transform: rotate(360deg) scale(1); /* Final state: Rotate back to 0 degrees, normal size */
+  }
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
