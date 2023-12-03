@@ -33,6 +33,7 @@ h6 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: lighter;
 }
+
 /*--------------------------------------------------------------
 # Polygon Object
 --------------------------------------------------------------*/
@@ -50,15 +51,21 @@ polygon {
 
 @keyframes rotateDiamond {
   0% {
-    transform: rotate(0deg) scale(1); /* Initial state: no rotation, normal size */
+    transform: rotate(0deg) scale(1);
+    /* Initial state: no rotation, normal size */
   }
+
   50% {
-    transform: rotate(180deg) scale(1.2); /* Midway: Rotate 180 degrees, scale up by 20% */
+    transform: rotate(180deg) scale(1.2);
+    /* Midway: Rotate 180 degrees, scale up by 20% */
   }
+
   100% {
-    transform: rotate(360deg) scale(1); /* Final state: Rotate back to 0 degrees, normal size */
+    transform: rotate(360deg) scale(1);
+    /* Final state: Rotate back to 0 degrees, normal size */
   }
 }
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -69,7 +76,7 @@ polygon {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background:#eb2175;
+  background: #eb2175;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -241,7 +248,7 @@ polygon {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color:  #f2a2c3;
+  background-color: #f2a2c3;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -654,9 +661,41 @@ section {
   bottom: 0;
 }
 
+.nextImage {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.nextImage:hover,
+.nextImage:active {
+  background-color: #3fb0e4;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+.photo-details {
+  max-width: 600px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the images within the container */
+.portfolio-details-slider img {
+  width: 100%;
+  max-height: fit-content;
+  height: auto;
+  position: absolute;
+}
+
 .portfolio-details {
   padding-top: 40px;
 }

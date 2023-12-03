@@ -35,7 +35,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -190,7 +190,7 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
@@ -212,7 +212,6 @@
       clickable: true
     }
   });
-
   /**
    * Testimonials slider
    */
@@ -255,8 +254,36 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
 
 })()
+// Data structure holding image URLs
+const imageArray = [
+  "assets/img/nature/nature-1.jpg",
+  "assets/img/nature/nature-2.jpg",
+  "assets/img/nature/nature-3.jpg",
+  "assets/img/friends/friends-1.jpg",
+  "assets/img/friends/friends-2.jpg",
+  "assets/img/friends/friends-3.jpg",
+  "assets/img/friends/friends-5.jpg",
+  
+];
+
+// Function to change the displayed image sequentially
+function changeImage() {
+  // Get the displayed image element and current image index
+  const displayedImage = document.getElementById("displayedImage");
+  let currentIndex = parseInt(displayedImage.getAttribute("data-index")) || 0;
+
+  // Increment the index and reset to 0 if it exceeds the array length
+  currentIndex = (currentIndex + 1) % imageArray.length;
+
+  // Update the image source and data-index attribute
+  displayedImage.src = imageArray[currentIndex];
+  displayedImage.setAttribute("data-index", currentIndex);
+}
+
+// Attach click event listener to the button
+document.getElementById("changeImageButton").addEventListener("click", changeImage);
