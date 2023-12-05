@@ -8,22 +8,13 @@ var otherTile; //blank tile
 var turns = 0;
 
 // var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-// var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
-const imgOrder = [
-    "assets/img/puzzle/4.jpg",
-    "assets/img/puzzle/2.jpg",
-    "assets/img/puzzle/8.jpg",
-    "assets/img/puzzle/5.jpg",
-    "assets/img/puzzle/1.jpg",
-    "assets/img/puzzle/6.jpg",
-    "assets/img/puzzle/7.jpg",
-    "assets/img/puzzle/9.jpg",
-    "assets/img/puzzle/3.jpg"
-  ];
+var imgOrder = ["assets/img/puzzle/4", "assets/img/puzzle/2", "assets/img/puzzle/8",
+    "assets/img/puzzle/5", "assets/img/puzzle/1", "assets/img/puzzle/6", "assets/img/puzzle/7",
+    "assets/img/puzzle/9", "assets/img/puzzle/3"];
 
-window.onload = function() {
-    for (let r=0; r < rows; r++) {
-        for (let c=0; c < columns; c++) {
+window.onload = function () {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
 
             //<img id="0-0" src="1.jpg">
             let tile = document.createElement("img");
@@ -41,6 +32,38 @@ window.onload = function() {
             document.getElementById("board").append(tile);
 
         }
+    }
+}
+function checkWin() {
+    // Create an array to represent the correct order
+    var correctOrder = ["assets/img/puzzle/1", "assets/img/puzzle/2", "assets/img/puzzle/3",
+                        "assets/img/puzzle/4", "assets/img/puzzle/5", "assets/img/puzzle/6",
+                        "assets/img/puzzle/7", "assets/img/puzzle/8", "assets/img/puzzle/9"];
+
+    // Create an array to store the current order of images on the board
+    var currentOrder = [];
+
+    // Loop through the tiles on the board and push their src attributes to the currentOrder array
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            currentOrder.push(tile.src);
+        }
+    }
+
+    // Compare the current order with the correct order
+    var isWin = false;
+
+    for (let i = 0; i < correctOrder.length; i++) {
+        if (correctOrder[i] == currentOrder[i]) {
+            isWin = true;
+            break;
+        }
+    }
+
+    // If the orders match, the user has won
+    if (isWin) {
+        alert("Congratulations! You've solved the puzzle!");
     }
 }
 
@@ -65,9 +88,6 @@ function dragDrop() {
 }
 
 function dragEnd() {
-    // if (!otherTile.src.includes("3.jpg")) {
-    //     return;
-    // }
 
     let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
     let r = parseInt(currCoords[0]);
@@ -77,11 +97,11 @@ function dragEnd() {
     let r2 = parseInt(otherCoords[0]);
     let c2 = parseInt(otherCoords[1]);
 
-    let moveLeft = r == r2 && c2 == c-1;
-    let moveRight = r == r2 && c2 == c+1;
+    let moveLeft = r == r2 && c2 == c - 1;
+    let moveRight = r == r2 && c2 == c + 1;
 
-    let moveUp = c == c2 && r2 == r-1;
-    let moveDown = c == c2 && r2 == r+1;
+    let moveUp = c == c2 && r2 == r - 1;
+    let moveDown = c == c2 && r2 == r + 1;
 
     let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
 
@@ -92,9 +112,10 @@ function dragEnd() {
         currTile.src = otherImg;
         otherTile.src = currImg;
 
-        turns += 1;
-        document.getElementById("turns").innerText = turns;
+        // turns += 1;
+        // document.getElementById("turns").innerText = turns;
     }
+    checkWin();
 
 
 }

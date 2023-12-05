@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Puzzle Game
 --------------------------------------------------------------*/
-#board {
+/* #board {
   width: 360px;
   height: 360px;
   background-color: lightblue;
@@ -16,4 +16,4 @@
   width: 118px;
   height: 118px;
   border: 1px solid #0c67ae;
-}
+} */

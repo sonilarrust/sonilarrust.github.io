@@ -268,7 +268,6 @@ const imageArray = [
   "assets/img/friends/friends-2.jpg",
   "assets/img/friends/friends-3.jpg",
   "assets/img/friends/friends-5.jpg",
-  
 ];
 
 // Function to change the displayed image sequentially
@@ -287,3 +286,5 @@ function changeImage() {
 
 // Attach click event listener to the button
 document.getElementById("changeImageButton").addEventListener("click", changeImage);
+
+

@@ -1169,3 +1169,23 @@ section {
     padding-right: 20px 15px;
   }
 }
+/*--------------------------------------------------------------
+# Puzzle Game
+--------------------------------------------------------------*/
+#board {
+  width: 375px;
+  height: 375px;
+  background-color: lightblue;
+  border: 11px solid #0c67ae;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+#board img {
+  width: 118px;
+  height: 118px;
+  border: 1px solid #0c67ae;
+}
