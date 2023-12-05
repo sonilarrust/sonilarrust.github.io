@@ -271,7 +271,24 @@ const imageArray = [
 ];
 
 // Function to change the displayed image sequentially
-function changeImage() {
+function previousImage() {
+  // Get the displayed image element and current image index
+  const displayedImage = document.getElementById("displayedImage");
+  let currentIndex = parseInt(displayedImage.getAttribute("data-index")) || 0;
+
+  // Increment the index and reset to 0 if it exceeds the array length
+  currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+
+  // Update the image source and data-index attribute
+  displayedImage.src = imageArray[currentIndex];
+  displayedImage.setAttribute("data-index", currentIndex);
+}
+
+// Attach click event listener to the button
+document.getElementById("previousImageButton").addEventListener("click", previousImage);
+// Function to change the displayed image sequentially
+
+function nextImage() {
   // Get the displayed image element and current image index
   const displayedImage = document.getElementById("displayedImage");
   let currentIndex = parseInt(displayedImage.getAttribute("data-index")) || 0;
@@ -285,6 +302,6 @@ function changeImage() {
 }
 
 // Attach click event listener to the button
-document.getElementById("changeImageButton").addEventListener("click", changeImage);
+document.getElementById("nextImageButton").addEventListener("click", nextImage);
 
 
